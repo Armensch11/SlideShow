@@ -86,7 +86,7 @@ button:hover {
 }
 
 img {
-	border: 1px solid rgb(115, 178, 180);
+	border: 1px solid rgb(50, 106, 116);
 
 	border-radius: 4px;
 	max-height: 100%;
@@ -94,8 +94,6 @@ img {
 }
 div.icons > img {
 	box-sizing: border-box;
-
-	z-index: -5;
 }
 img.zoom {
 	display: none;
