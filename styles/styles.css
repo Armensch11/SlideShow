@@ -71,7 +71,7 @@ button:hover {
 	column-gap: 5px;
 	width: 100%;
 	min-height: fit-content;
-
+	justify-content: space-around;
 	position: absolute;
 	margin-bottom: 1%;
 	bottom: 0;
@@ -79,16 +79,24 @@ button:hover {
 }
 .icons {
 	border-radius: 3px;
+	border: 1px solid grey;
+
 	max-height: 70%;
-	width: 100px;
+	max-width: 97px;
 }
+
 img {
 	border: 1px solid rgb(115, 178, 180);
-	position: relative;
+
 	border-radius: 4px;
 	max-height: 100%;
 	max-width: 100%;
 }
-.icons .zoom {
+div.icons > img {
+	box-sizing: border-box;
+
+	z-index: -5;
+}
+img.zoom {
 	display: none;
 }
