@@ -1,24 +1,24 @@
 let imageShow = document.getElementsByClassName('nested-image');
 let positionHolder = 0;
-// for (image of imageShow) {
-// 	image.style.zIndex = 1;
-// }
+
 let backBtn = document.getElementsByTagName('button')[0];
-console.log(backBtn);
+let iconFrame = document.getElementsByClassName('icon-image');
+console.log(iconFrame);
 backBtn.addEventListener('click', function() {
 	for (image of imageShow) {
 		image.style.zIndex = -1;
 	}
 	if (positionHolder === 0) {
 		positionHolder = imageShow.length - positionHolder - 1;
-		return (imageShow[positionHolder].style.zIndex = 1);
+		imageShow[positionHolder].style.zIndex = 1;
 	} else {
 		positionHolder = positionHolder - 1;
-		return (imageShow[positionHolder].style.zIndex = 1);
+		imageShow[positionHolder].style.zIndex = 1;
 	}
 });
+
 let forwardBtn = document.getElementsByTagName('button')[1];
-console.log(forwardBtn);
+
 forwardBtn.addEventListener('click', function() {
 	for (image of imageShow) {
 		image.style.zIndex = -1;
@@ -31,6 +31,7 @@ forwardBtn.addEventListener('click', function() {
 		return (imageShow[positionHolder].style.zIndex = 1);
 	}
 });
+
 let randomBtn = document.getElementsByTagName('button')[2];
 // let stop = setInterval(function() {
 // 	for (image of imageShow) {
