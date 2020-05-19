@@ -1,14 +1,17 @@
 .wrapper {
-	width: 90%;
-	height: 70%;
+	width: 100%;
+	height: 80%;
 	display: flex;
-	flex-grow: 1;
+	flex-grow: 0;
 }
 .image {
 	padding: 1em;
 	border: 2px solid grey;
 	border-radius: 8px;
 	box-shadow: 4px 4px 4px;
+	text-align: center;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 35px;
 
 	position: relative;
 	align-self: center;
@@ -20,18 +23,26 @@
 }
 .button {
 	align-self: center;
-	margin: 1em;
+	margin: 1%;
+}
+div.button.back,
+div.button.forward {
+	min-height: 90%;
+	width: 2%;
+	border: 1px solid grey;
+	border-radius: 5px;
 }
 button {
-	position: relative;
 	background-color: rgb(182, 182, 173);
-	width: inherit;
-	height: inherit;
-	box-sizing: border-box;
-	border-radius: 3px;
 	border: 1px solid grey;
+	background-image: url();
+	height: 90%;
+	width: 100%;
+	box-sizing: border-box;
+
+	border-radius: 3px;
+
 	text-align: center;
-	padding: 3px;
 
 	font-family: 'Courier New', Courier, monospace;
 }
@@ -40,32 +51,35 @@ button:hover {
 	font-weight: 700;
 	background-color: rgba(117, 167, 164, 0.986);
 	box-shadow: 2px 2px;
+	box-sizing: border-box;
 }
 .nested-image {
-	max-height: 100%;
-	max-width: 100%;
+	max-height: 80%;
 
 	z-index: -1;
 	position: absolute;
 	top: 0;
 	left: 0;
+
 	border-radius: inherit;
 }
 .icon-container {
-	width: 100%;
-	height: 10%;
 	display: flex;
-	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: row;
+	column-gap: 5px;
+	width: 100%;
+	min-height: fit-content;
+
 	position: absolute;
-	margin-bottom: 2%;
+	margin-bottom: 1%;
 	bottom: 0;
 	left: 0;
 }
 .icons {
 	border-radius: 3px;
-	max-height: 100%;
+	max-height: 70%;
 	width: 100px;
-	display: inline-block;
 }
 img {
 	border: 1px solid rgb(115, 178, 180);
