@@ -16,12 +16,12 @@ backBtn.addEventListener('click', function() {
 		positionHolder = imageShow.length - positionHolder - 1;
 		imageShow[positionHolder].style.zIndex = 1;
 
-		iconBorder[positionHolder].style.border = '3px solid darkgreen';
+		iconBorder[positionHolder].style.border = '3px solid darkgrey';
 	} else {
 		positionHolder = positionHolder - 1;
 		imageShow[positionHolder].style.zIndex = 1;
 
-		iconBorder[positionHolder].style.border = '3px solid darkgreen';
+		iconBorder[positionHolder].style.border = '3px solid darkgrey';
 	}
 });
 
