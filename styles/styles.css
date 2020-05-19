@@ -1,6 +1,6 @@
 .wrapper {
-	max-width: 60%;
-	height: 90%;
+	width: 60%;
+	height: 60%;
 	display: flex;
 	flex-grow: 0;
 	margin-left: 20%;
@@ -10,14 +10,13 @@
 	border: 2px solid grey;
 	border-radius: 8px;
 	box-shadow: 4px 4px 4px;
-	text-align: center;
-	font-family: 'Courier New', Courier, monospace;
-	font-size: 35px;
-
+	display: flex;
 	position: relative;
 	align-self: center;
 	width: 90%;
 	height: 90%;
+	flex-direction: column;
+	justify-content: center;
 
 	box-sizing: border-box;
 	background-color: grey;
@@ -85,16 +84,11 @@ button:hover {
 	max-width: 97px;
 }
 
-img {
+div.icons > img {
+	box-sizing: border-box;
 	border: 1px solid rgb(50, 106, 116);
 
 	border-radius: 4px;
 	max-height: 100%;
 	max-width: 100%;
-}
-div.icons > img {
-	box-sizing: border-box;
-}
-img.zoom {
-	display: none;
 }
