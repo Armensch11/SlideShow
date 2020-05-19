@@ -3,8 +3,22 @@ let positionHolder = 0;
 
 let backBtn = document.getElementsByTagName('button')[0];
 let iconBorder = document.getElementsByClassName('icon-image');
-console.log(iconBorder);
-backBtn.addEventListener('click', function() {
+
+backBtn.addEventListener('click', backWard);
+
+let forwardBtn = document.getElementsByTagName('button')[1];
+
+forwardBtn.addEventListener('click', forWard);
+
+addEventListener('keydown', function(event) {
+	if (event.which == 37) {
+		backWard();
+	} else if (event.which === 39) {
+		forWard();
+	}
+});
+
+function backWard() {
 	for (image of imageShow) {
 		image.style.zIndex = -1;
 	}
@@ -23,11 +37,8 @@ backBtn.addEventListener('click', function() {
 
 		iconBorder[positionHolder].style.border = '3px solid darkgrey';
 	}
-});
-
-let forwardBtn = document.getElementsByTagName('button')[1];
-
-forwardBtn.addEventListener('click', function() {
+}
+function forWard() {
 	for (image of imageShow) {
 		image.style.zIndex = -1;
 	}
@@ -43,62 +54,17 @@ forwardBtn.addEventListener('click', function() {
 		imageShow[positionHolder].style.zIndex = 1;
 		iconBorder[positionHolder].style.border = '3px solid yellow';
 	}
-});
+}
 
-let randomBtn = document.getElementsByTagName('button')[2];
-// let stop = setInterval(function() {
+// let randomBtn = document.getElementsByTagName('button')[2];
+
+// function randomChange() {
 // 	for (image of imageShow) {
 // 		image.style.zIndex = -1;
 // 	}
 // 	let randomiser = Math.floor(Math.random() * imageShow.length);
-// 	return (imageShow[randomiser].style.zIndex = 1);
-// }, 5000);
-// randomBtn.addEventListener(
-// 	'click',
-// 	setInterval(function() {
-// 		for (image of imageShow) {
-// 			image.style.zIndex = -1;
-// 		}
-// 		let randomiser = Math.floor(Math.random() * imageShow.length);
-// 		return (imageShow[randomiser].style.zIndex = 1);
-// 	}, 1000)
-// );
-// console.log(stop);
-// let stopBtn = document.getElementsByTagName('button')[3];
-// stopBtn.addEventListener('click', function() {
-// 	return clearInterval(stop);
+// 	imageShow[randomiser].style.zIndex = 1;
+// }
+// randomBtn.addEventListener('click', function() {
+// 	setInterval((randomChange, 5000));
 // });
-// =====================
-// let backBtn = document.getElementsByTagName('button')[0];
-// console.log(backBtn);
-// backBtn.addEventListener('click', function() {
-// 	for (image of imageShow) {
-// 		image.style.zIndex = -1;
-// 	}
-// 	let randomiser = Math.floor(Math.random() * imageShow.length);
-// 	return (imageShow[randomiser].style.zIndex = 1);
-// });
-// let forwardBtn = document.getElementsByTagName('button')[1];
-// console.log(forwardBtn);
-// forwardBtn.addEventListener('click', function() {
-// 	for (image of imageShow) {
-// 		image.style.zIndex = -1;
-// 	}
-// 	let randomiser = Math.floor(Math.random() * imageShow.length);
-// 	return (imageShow[randomiser].style.zIndex = 1);
-// // });
-// let stop = setInterval(function() {
-// 	for (image of imageShow) {
-// 		image.style.zIndex = -1;
-// 	}
-// 	let randomiser = Math.floor(Math.random() * imageShow.length);
-// 	return (imageShow[randomiser].style.zIndex = 1);
-// }, 5000);
-// setInterval(function() {
-// 	for (image of imageShow) {
-// 		image.style.zIndex = -1;
-// 	}
-// 	let randomiser = Math.floor(Math.random() * imageShow.length);
-// 	return (imageShow[randomiser].style.zIndex = 1);
-// }, 5000);
-// clearInterval(stop);
