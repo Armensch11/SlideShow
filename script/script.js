@@ -2,18 +2,26 @@ let imageShow = document.getElementsByClassName('nested-image');
 let positionHolder = 0;
 
 let backBtn = document.getElementsByTagName('button')[0];
-let iconFrame = document.getElementsByClassName('icon-image');
-console.log(iconFrame);
+let iconBorder = document.getElementsByClassName('icon-image');
+console.log(iconBorder);
 backBtn.addEventListener('click', function() {
 	for (image of imageShow) {
 		image.style.zIndex = -1;
 	}
+	for (border of iconBorder) {
+		border.style.border = '1px solid';
+	}
+
 	if (positionHolder === 0) {
 		positionHolder = imageShow.length - positionHolder - 1;
 		imageShow[positionHolder].style.zIndex = 1;
+
+		iconBorder[positionHolder].style.border = '3px solid darkgreen';
 	} else {
 		positionHolder = positionHolder - 1;
 		imageShow[positionHolder].style.zIndex = 1;
+
+		iconBorder[positionHolder].style.border = '3px solid darkgreen';
 	}
 });
 
@@ -23,12 +31,17 @@ forwardBtn.addEventListener('click', function() {
 	for (image of imageShow) {
 		image.style.zIndex = -1;
 	}
+	for (border of iconBorder) {
+		border.style.border = '1px solid grey';
+	}
 	if (positionHolder === imageShow.length - 1) {
 		positionHolder = 0;
-		return (imageShow[positionHolder].style.zIndex = 1);
+		imageShow[positionHolder].style.zIndex = 1;
+		iconBorder[positionHolder].style.border = '3px solid yellow';
 	} else {
 		positionHolder = positionHolder + 1;
-		return (imageShow[positionHolder].style.zIndex = 1);
+		imageShow[positionHolder].style.zIndex = 1;
+		iconBorder[positionHolder].style.border = '3px solid yellow';
 	}
 });
 
