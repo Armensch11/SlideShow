@@ -9,11 +9,13 @@ backBtn.addEventListener('click', backWard);
 let forwardBtn = document.getElementsByTagName('button')[1];
 
 forwardBtn.addEventListener('click', forWard);
+
 let randomBtn = document.getElementById('random');
 let stopSlide;
 let stopBtn = document.getElementById('stop');
 
 stopBtn.addEventListener('click', () => clearInterval(stopSlide));
+
 randomBtn.addEventListener('click', randSlide);
 
 addEventListener('keydown', function(event) {
@@ -33,7 +35,7 @@ function backWard() {
 		image.style.zIndex = -1;
 	}
 	for (border of iconBorder) {
-		border.style.border = '1px solid';
+		border.style.border = '1px solid grey';
 	}
 
 	if (positionHolder === 0) {
