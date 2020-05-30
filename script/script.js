@@ -82,3 +82,15 @@ function randSlide() {
 	stopSlide = setInterval(randomShow, 3000);
 }
 // setTimeout(noAction, 10000);
+(function activeIcons() {
+	let iconDiv = Array.from(document.getElementsByClassName('icons'));
+	// console.log(iconDiv);
+	let imageArr = Array.from(imageShow);
+	console.log(imageArr);
+	iconDiv.forEach((el, index) => {
+		el.addEventListener('click', () => {
+			imageArr.forEach((el) => (el.style.zIndex = -1));
+			imageArr[index].style.zIndex = 1;
+		});
+	});
+})();
